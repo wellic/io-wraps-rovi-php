@@ -1,4 +1,2 @@
-io-wraps-rovi-php
+io-wraps-usatoday
 =================
-
-Rovi Cloud Services alpha client libraries for PHP
