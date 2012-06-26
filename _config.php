@@ -30,8 +30,8 @@ $apiConfig = array(
     'oauth2_redirect_uri' => '',
 
     // The developer key, you get this at https://code.google.com/apis/console
-    'developer_key' => 'htxuvk7utgs6n485y674at3d',
-    'developer_secret' => 'SecretNeil',
+    'developer_key' => '',
+    'developer_secret' => '',
     'signature_name' => 'sig',
     'signature_type' => 'md5',
     'signature_location' => 'query',

@@ -10,7 +10,8 @@ require_once './contrib/apiTvlistingsapiService.php';
 $client = new apiClient();
 
 // Set credentials
-$client -> setDeveloperKey("ufrrvnhf59xfx6qkvyfama8z");
+$client -> setDeveloperKey("KEY_HERE");
+// Leave secret blank -- not used in the TV Listings API
 $client -> setDeveloperSecret("");
 
 // Instantiate service

@@ -10,8 +10,8 @@ require_once './contrib/apiMetadataandsearchapiService.php';
 $client = new apiClient();
 
 // Set credentials
-$client -> setDeveloperKey("htxuvk7utgs6n485y674at3d");
-$client -> setDeveloperSecret("SecretNeil");
+$client -> setDeveloperKey("KEY_HERE");
+$client -> setDeveloperSecret("SECRET_HERE");
 
 // Instantiate service
 $service = new apiMetadataandsearchapiService($client);
