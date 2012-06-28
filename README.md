@@ -1,46 +1,67 @@
-## What is Rovi PHP I/O Wraps?
- 
-A PHP wrapper for Rovi Cloud Service APIs.
+# USA TODAY API Client Library for PHP
+###PHP client libraries created with Mashery I/O Wraps, a semi-automated native language SDK generator.
 
-## What is I/O Wraps?
+## What is the Rovi Cloud Services API?
+Rovi is a global leader in digital entertainment technology for some of the largest CE manufacturers, service providers and online, mobile and application developers in the world. We now have a range of APIs that can help you to create and deliver an even more enhanced entertainment experience to your customers.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Head over to [developer.rovicorp.com](http://developer.rovicorp.com) to learn more. You can register for instant access to their API, view their documentation, and even make live API calls with their interactive docs.
 
-## About Rovi API
+## Summary
+An API client library (also known as an SDK or language wrapper) is an efficiency tool for programmer that helps bind external resources to your native programming language. Traditionally, to integrate an API into your project without a client library, you would need to do the following:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+1. Construct a network request using a transport library (e.g. HTTP)
 
+2. Integrate authentication flow and signatures (e.g. OAuth, MD5/SHA-256, etc.)
 
-## What are Client Libraries and why do we need them?
+3. Construct and execute API calls manually, often a trial and error process while reading documentation
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+4. Parse through results
 
-## How are Client Libraries created?
+5. Lather. Rinse. Repeat.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## How does the client library help?
+Client libraries make life easier by bringing the API into your native language environment. So, rather than making curl calls, piping the output into a variable, and parsing through the variable -- the client library handles the network connectivity, authorization and API call execution with syntax you're familiar with:
+
+    // Initialize the client library
+    $client = new apiClient();
+
+    // Set your API key
+    $client->setDeveloperKey("YOUR_KEY_HERE");
+    $client->setDeveloperSecret("YOUR_SECRET_HERE");
+
+    // Connect client to the API
+    $api = new apiService($client);
+
+    // Make an API call and store the response in a variable/object
+    $responseObj = $api -> AutocompleteMethods -> Autocomplete ("lady");
+
+Above is just a pseudo-PHP-code example of how this library works. If you'd like to see it in action, check out the example PHP files in this repo.
 
 ## Requirements
+1. PHP - if you'd like a quick a dirty isolated LAMP stack, check out [XAMPP](http://www.apachefriends.org/en/xampp.html). Works on Mac, PC and even Linux.
+2. USA TODAY API key -- head over to [http://developer.rovicorp.com](http://developer.rovicorp.com) 
 
-Any standard LAMP stack. PHP requirements are the regular suspects. Please report any dependency issues along with a stack bio (OS, server, etc.).
+## IDE is optional, but nice
+At Mashery, we love [vim](http://www.vim.org) just as much as the next guy, but when it comes to tool-tips, code-completion and general object-oriented goodness, IDEs can be really useful. [Eclipse](http://eclipse.org), [Aptana](http://aptana.com), [Netbeans](http://netbeans.org), [Komodo](http://www.activestate.com/komodo-ide), etc. They're all very mature and useful tools.
 
-## How to Use/Installation
+## Installation / Quick Start Guide
+Follow the steps below for a quick start to using this client library:
 
-Unpack this package into a directory at the "htdocs" level on any web server stack with PHP. The references to the dependences are
-all relative.
+1. Grab the latest source with git. 
 
-1. The three functional PHP examples are rovi_autocomplete.php, rovi_metadata.php and rovi_tvlistings.php. These are live examples, not the libraires. To see how the libraries are used, just peek at the source.
+    <pre>git clone git://github.com/mashery/io-wrap-usatoday-php.git</pre>
 
-2. Add your keys and secrets to these source files to make calls. Each API requires a unique key/secret. Head over to http://developer.rovicorp.com, sign in, and navigate to "My Account" to fetch or register for keys.
+2. Move the project source tree into your sandbox LAMP stack environment (anywhere below the httpdocs/htdocs level -- example code is relatively linked)
 
-3. Navigate your browser to the example PHP apps, and give it a whirl.
+3. Head over to [Rovi Cloud Services](http://developer.rovicorp.com) to fetch an API key
 
+4. Open up your editor and add your API key where you see *YOUR_KEY_HERE* on the sample PHP scripts.
 
-## Examples/
-	<pre>Code snippets go here</pre>
+5. Point your browser to one of the example files where this is deployed:
 
+    <pre>Ex: http://localhost/io-wrap-rovi-php/rovi_autocopmlete.php</pre>
 
-## About 
-
-* Designed and built with lots of <span class="love">love</span> in <strong>New York</strong> &amp; <strong>San Francisco</strong> by the biggest little <a href="http://twitter.com/masherydev">Developer Outreach team</a> on seven continents.
+## About / License
 * No warranty expressed or implied. Software as is.
-* Code licensed under the <a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+* [MIT License](http://www.opensource.org/licenses/mit-license.html)
+* Lovingly created by [Mashery Dev](http://dev.mashery.com)
