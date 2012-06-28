@@ -112,44 +112,85 @@
 		        </div><!-- /btn-group -->
 		      </div>
 	
-        <h2>What is I/O Wraps Rovi (PHP)?</h2>
+        <h2>Rovi API Client Library for PHP</h2>
 
-<p>A PHP wrapper for Rovi Cloud Service APIs.</p>
+<p>PHP client libraries created with Mashery I/O Wraps, a semi-automated native language SDK generator.</p>
 
-<hr class="soften"><h2>What is I/O Wraps?</h2>
+<hr class="soften"><h2>What is the Rovi Cloud Services API?</h2>
+<p>Rovi is a global leader in digital entertainment technology for some of the largest CE manufacturers, service providers and online, mobile and application developers in the world. We now have a range of APIs that can help you to create and deliver an even more enhanced entertainment experience to your customers.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Head over to <a href="http://developer.rovicorp.com">developer.rovicorp.com</a> to learn more. You can register for instant access to their API, view their documentation, and even make live API calls with their interactive docs.</p>
 
-<hr class="soften"><h2>About Rovi API</h2>
+<hr class="soften"><h2>Summary</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>An API client library (also known as an SDK or language wrapper) is an efficiency tool for programmer that helps bind external resources to your native programming language. Traditionally, to integrate an API into your project without a client library, you would need to do the following:</p>
 
-<hr class="soften"><h2>What are Client Libraries and why do we need them?</h2>
+<ol>
+<li><p>Construct a network request using a transport library (e.g. HTTP)</p></li>
+<li><p>Integrate authentication flow and signatures (e.g. OAuth, MD5/SHA-256, etc.)</p></li>
+<li><p>Construct and execute API calls manually, often a trial and error process while reading documentation</p></li>
+<li><p>Parse through results</p></li>
+<li><p>Lather. Rinse. Repeat.</p></li>
+</ol>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<hr class="soften"><h2>How does the client library help?</h2>
 
-<hr class="soften"><h2>How are Client Libraries created?</h2>
+<p>Client libraries make life easier by bringing the API into your native language environment. So, rather than making curl calls, piping the output into a variable, and parsing through the variable -- the client library handles the network connectivity, authorization and API call execution with syntax you're familiar with:</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<pre><code>// Initialize the client library
+$client = new apiClient();
+
+// Set your API key
+$client-&gt;setDeveloperKey("YOUR_KEY_HERE");
+$client-&gt;setDeveloperSecret("YOUR_SECRET_HERE");
+
+// Connect client to the API
+$api = new apiService($client);
+
+// Make an API call and store the response in a variable/object
+$responseObj = $api -&gt; AutocompleteMethods -&gt; Autocomplete ("lady");
+</code></pre>
+<p>Above is just a pseudo-PHP-code example of how this library works. If you'd like to see it in action, check out the example PHP files in this repo.</p>
 
 <hr class="soften"><h2>Requirements</h2>
 
-<p>Any standard LAMP stack. PHP requirements are the regular suspects. Please report any dependency issues along with a stack bio (OS, server, etc.).</p>
+<ol>
+<li>PHP - if you'd like a quick a dirty isolated LAMP stack, check out <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>. Works on Mac, PC and even Linux.</li>
+<li>Rovi API key -- head over to <a href="http://developer.rovicorp.com">http://developer.rovicorp.com</a> </li>
+</ol>
 
-<hr class="soften"><h2>How to Use/Installation</h2>
+<hr class="soften"><h2>IDE is optional, but nice</h2>
 
-<p>Unpack this package into a directory at the "htdocs" level on any web server stack with PHP. The references to the dependences are
-all relative.</p>
+<p>At Mashery, we love <a href="http://www.vim.org">vim</a> just as much as the next guy, but when it comes to tool-tips, code-completion and general object-oriented goodness, IDEs can be really useful. <a href="http://eclipse.org">Eclipse</a>, <a href="http://aptana.com">Aptana</a>, <a href="http://netbeans.org">Netbeans</a>, <a href="http://www.activestate.com/komodo-ide">Komodo</a>, etc. They're all very mature and useful tools.</p>
+
+<hr class="soften"><h2>Installation / Quick Start Guide</h2>
+
+<p>Follow the steps below for a quick start to using this client library:</p>
 
 <ol>
-<li><p>The three functional PHP examples are rovi_autocomplete.php, rovi_metadata.php and rovi_tvlistings.php. These are live examples, not the libraires. To see how the libraries are used, just peek at the source.</p></li>
-<li><p>Add your keys and secrets to these source files to make calls. Each API requires a unique key/secret. Head over to <a href="http://developer.rovicorp.com">http://developer.rovicorp.com</a>, sign in, and navigate to "My Account" to fetch or register for keys.</p></li>
-<li><p>Navigate your browser to the example PHP apps, and give it a whirl.</p></li>
+<li>
+<p>Grab the latest source with git. </p>
 
-</ol><hr class="soften"><h2>Examples/</h2>
+<pre>git clone git://github.com/mashery/io-wrap-rovi-php.git</pre>
+</li>
+<li><p>Move the project source tree into your sandbox LAMP stack environment (anywhere below the httpdocs/htdocs level -- example code is relatively linked)</p></li>
+<li><p>Head over to <a href="http://developer.rovicorp.com">Rovi Cloud Services</a> to fetch an API key</p></li>
+<li><p>Open up your editor and add your API key where you see <em>YOUR_KEY_HERE</em> on the sample PHP scripts.</p></li>
+<li>
+<p>Point your browser to one of the example files where this is deployed:</p>
 
-<pre><code>&lt;pre&gt;Code snippets go here&lt;/pre&gt;
-</code></pre>
+<pre>Ex: http://localhost/io-wrap-rovi-php/rovi_autocopmlete.php</pre>
+</li>
+</ol>
+
+<hr class="soften"><h2>About / License</h2>
+
+<ul>
+<li>No warranty expressed or implied. Software as is.</li>
+<li><a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a></li>
+<li>Lovingly created by <a href="http://dev.mashery.com">Mashery Dev</a>
+</li>
+</ul>
 
 <hr class="soften"><h2>About</h2>
 
