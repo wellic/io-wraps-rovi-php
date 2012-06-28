@@ -1,4 +1,4 @@
-# USA TODAY API Client Library for PHP
+# Rovi Cloud Services Client Library for PHP
 ###PHP client libraries created with Mashery I/O Wraps, a semi-automated native language SDK generator.
 
 ## What is the Rovi Cloud Services API?
@@ -39,7 +39,7 @@ Above is just a pseudo-PHP-code example of how this library works. If you'd like
 
 ## Requirements
 1. PHP - if you'd like a quick a dirty isolated LAMP stack, check out [XAMPP](http://www.apachefriends.org/en/xampp.html). Works on Mac, PC and even Linux.
-2. USA TODAY API key -- head over to [http://developer.rovicorp.com](http://developer.rovicorp.com) 
+2. Rovi Cloud Services API key -- head over to [http://developer.rovicorp.com](http://developer.rovicorp.com) 
 
 ## IDE is optional, but nice
 At Mashery, we love [vim](http://www.vim.org) just as much as the next guy, but when it comes to tool-tips, code-completion and general object-oriented goodness, IDEs can be really useful. [Eclipse](http://eclipse.org), [Aptana](http://aptana.com), [Netbeans](http://netbeans.org), [Komodo](http://www.activestate.com/komodo-ide), etc. They're all very mature and useful tools.
@@ -49,7 +49,7 @@ Follow the steps below for a quick start to using this client library:
 
 1. Grab the latest source with git. 
 
-    <pre>git clone git://github.com/mashery/io-wrap-usatoday-php.git</pre>
+    <pre>git clone git://github.com/mashery/io-wraps-rovi-php.git</pre>
 
 2. Move the project source tree into your sandbox LAMP stack environment (anywhere below the httpdocs/htdocs level -- example code is relatively linked)
 
