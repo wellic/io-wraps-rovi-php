@@ -1,4 +1,4 @@
-## What is I/O Wraps Rovi (PHP)?
+## What is Rovi PHP I/O Wraps?
  
 A PHP wrapper for Rovi Cloud Service APIs.
 
