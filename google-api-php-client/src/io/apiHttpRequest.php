@@ -24,7 +24,7 @@
  *
  */
 class apiHttpRequest {
-  const USER_AGENT_SUFFIX = "mashery-io-wraps/0.1";
+  const USER_AGENT_SUFFIX = "google-api-php-client/0.5.0";
 
   protected $url;
   protected $requestMethod;

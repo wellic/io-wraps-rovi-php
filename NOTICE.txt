@@ -1,0 +1,5 @@
+This product contains the following libraries:
+
+Google APIs Client Library for PHP (http://code.google.com/p/google-api-php-client/)
+Copyright (c) 2010 Google Inc. released under the Apache 2.0 License
+http://www.apache.org/licenses/LICENSE-2.0
